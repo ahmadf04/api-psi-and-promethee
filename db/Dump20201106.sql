@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.20, for macos10.15 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.21, for Win64 (x86_64)
 --
 -- Host: localhost    Database: db_spk
 -- ------------------------------------------------------
--- Server version	8.0.19
+-- Server version	8.0.21
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -87,8 +87,10 @@ CREATE TABLE `pengajuans` (
   `status_siswa` varchar(45) DEFAULT NULL,
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
+  `kelas` varchar(45) DEFAULT NULL,
+  `nisn` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -97,7 +99,7 @@ CREATE TABLE `pengajuans` (
 
 LOCK TABLES `pengajuans` WRITE;
 /*!40000 ALTER TABLE `pengajuans` DISABLE KEYS */;
-INSERT INTO `pengajuans` VALUES (20,'Rahmat','Petani','< 600.000','Cukup Layak','Lengkap','2020-08-20 06:27:58','2020-08-20 06:27:58'),(21,'Diki','Buruh','600.000 - 1.800.000','Tidak Layak','Piatu','2020-08-20 06:28:22','2020-08-20 06:28:22'),(22,'Budi','Wiraswasta','1.800.000 - 2.400.000','Cukup Layak','Yatim','2020-08-20 06:29:25','2020-08-20 06:29:25'),(23,'Ilham','PNS','> 2.400.000','Sangat Layak','Yatim Piatu','2020-08-20 06:29:51','2020-08-20 06:29:51'),(24,'Joko','Wiraswasta','600.000 - 1.800.000','Cukup Layak','Lengkap','2020-08-20 06:30:55','2020-08-20 06:30:55');
+INSERT INTO `pengajuans` VALUES (20,'Rahmat','Petani','< 600.000','Cukup Layak','Lengkap','2020-08-20 06:27:58','2020-11-05 06:22:32','A','123'),(21,'Diki','Buruh','600.000 - 1.800.000','Tidak Layak','Piatu','2020-08-20 06:28:22','2020-11-05 06:22:38','B','456'),(22,'Budi','Wiraswasta','1.800.000 - 2.400.000','Cukup Layak','Yatim','2020-08-20 06:29:25','2020-11-05 06:22:47','C','789'),(23,'Ilham','PNS','> 2.400.000','Sangat Layak','Yatim Piatu','2020-08-20 06:29:51','2020-11-05 06:22:55','D','012'),(24,'Joko','Wiraswasta','600.000 - 1.800.000','Cukup Layak','Lengkap','2020-08-20 06:30:55','2020-11-05 06:23:03','E','345');
 /*!40000 ALTER TABLE `pengajuans` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -218,4 +220,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-08-20 13:49:15
+-- Dump completed on 2020-11-06 11:48:40
