@@ -11,4 +11,4 @@ module.exports = (app) => {
     router.delete('/', pekerjaan.deleteAll)
 
     app.use('/pekerjaan', router)
-}
+};
