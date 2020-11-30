@@ -1,5 +1,5 @@
 module.exports = (sequelize, Sequelize) => {
-    const StatusSiswa = sequelize.define('status_siswa', {
+    const StatusSiswa = sequelize.define('status_siswas', {
         sub_kriteria: {
             type: Sequelize.STRING(45)
         },

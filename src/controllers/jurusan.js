@@ -1,5 +1,5 @@
 const db = require('../models/db')
-const Pengajuan = db.pengajuan
+const Jurusan = db.jurusan
 
 const error_message = 'Error occurred'
 
@@ -12,17 +12,11 @@ exports.create = (req, res) => {
     }
 
     const body = {
-        nisn: req.body.nisn,
-        kelas: req.body.kelas,
-        alternatif: req.body.alternatif,
-        jurusan: req.body.jurusan,
-        pekerjaan: req.body.pekerjaan,
-        penghasilan: req.body.penghasilan,
-        status_siswa: req.body.status_siswa,
-        jenis_bantuan: req.body.jenis_bantuan,
+        nama: req.body.nama,
+        alias: req.body.alias
     }
 
-    Pengajuan.create(body)
+    Jurusan.create(body)
         .then((data) => res.send(data))
         .catch((err) => {
             res.status(500).send({
@@ -32,7 +26,7 @@ exports.create = (req, res) => {
 }
 
 exports.findAll = (req, res) => {
-    Pengajuan.findAll()
+    Jurusan.findAll()
         .then((data) => res.send(data))
         .catch((err) => {
             res.status(500).send({
@@ -44,7 +38,7 @@ exports.findAll = (req, res) => {
 exports.findOne = (req, res) => {
     const id = req.params.id
 
-    Pengajuan.findByPk(id)
+    Jurusan.findByPk(id)
         .then((data) => res.send(data))
         .catch((err) => {
             res.status(500).send({
@@ -56,7 +50,7 @@ exports.findOne = (req, res) => {
 exports.update = (req, res) => {
     const id = req.params.id
 
-    Pengajuan.update(req.body, {
+    Jurusan.update(req.body, {
         where: { id: id }
     })
         .then((num) => {
@@ -78,7 +72,7 @@ exports.update = (req, res) => {
 exports.delete = (req, res) => {
     const id = req.params.id
 
-    Pengajuan.destroy({
+    Jurusan.destroy({
         where: { id: id }
     })
         .then((num) => {
@@ -98,7 +92,7 @@ exports.delete = (req, res) => {
 }
 
 exports.deleteAll = (req, res) => {
-    Pengajuan.destroy({
+    Jurusan.destroy({
         where: {},
         truncate: false
     })

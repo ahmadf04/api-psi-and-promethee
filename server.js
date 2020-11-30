@@ -38,6 +38,8 @@ require('./src/routes/penghasilan')(app)
 require('./src/routes/preferensi')(app)
 require('./src/routes/status-rumah')(app)
 require('./src/routes/status-siswa')(app)
+require('./src/routes/jurusan')(app)
+require('./src/routes/program-bantuan')(app)
 
 // set port, listen for request
 app.listen(8080, () => {

@@ -24,5 +24,7 @@ db.penghasilan = require('./penghasilan')(sequelize, Sequileze)
 db.preferensi = require('./preferensi')(sequelize, Sequileze)
 db.status_rumah = require('./status-rumah')(sequelize, Sequileze)
 db.status_siswa = require('./status-siswa')(sequelize, Sequileze)
+db.jurusan = require('./jurusan')(sequelize, Sequileze)
+db.program_bantuan = require('./program-bantuan')(sequelize, Sequileze)
 
 module.exports = db
